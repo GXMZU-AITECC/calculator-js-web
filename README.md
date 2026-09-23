@@ -2,7 +2,7 @@
 
 ## 项目简介
 
-简易计算器（Web 版）——科技社研发部**协作训练场**：页面骨架已就绪（显示区 + 键盘容器），按键与计算功能不预先实现，全部由成员的 PR 逐步"长出来"。
+简易计算器（Web 版）——科技社研发部**协作训练场**，即研发部面试考核：页面骨架已就绪（显示区 + 键盘容器），按键与计算功能不预先实现，全部由成员的 PR 逐步"长出来"。
 
 原型为 Python 桌面版 [demo-simple-calculator](https://github.com/GXMZU-AITECC/demo-simple-calculator)（MVC 架构），本项目将其移植为纯 HTML/CSS/JS，文件一一对应，方便对照阅读。
 
@@ -31,12 +31,12 @@
 
 ## 维护人员
 
-科技社技术部·研发部（负责人：陈自超）
+科技社技术部·研发部（负责人：陈自超、刘宁）
 
 ## 参与贡献（新成员必读）
 
 1. **先读组织规范**：[guidelines](https://github.com/GXMZU-AITECC/guidelines)（开发规范 / PR 规范 / Repo 规范）
-2. **认领任务**：在仓库 Issue 列表认领一个任务
+2. **认领任务**：在 [Issue 列表](https://github.com/GXMZU-AITECC/calculator-js-web/issues)认领一个任务（面试考核从 [#1](https://github.com/GXMZU-AITECC/calculator-js-web/issues/1) 开始）
 3. **开发**：fork 本仓库 → 从 `develop` 拉取 `feature/...` 分支 → 开发（函数写清楚注释：功能、参数、返回值）
 4. **提 PR**：向 `develop` 提交，标题用 `feat:` / `fix:` 前缀，描述按「目的 / 改动 / 测试」三段写
 5. **评审**：@至少 2 名评审人，至少 1 人批准后由项目负责人合并
