@@ -1,0 +1,93 @@
+/* =========================================================
+   简易计算器 样式（种子）
+   配色移植自 Python 桌面版 demo（customtkinter 深色主题）。
+   已就绪：显示区、键盘容器（4 列网格）、按键样式类（预留）。
+   ========================================================= */
+
+/* ---------- 全局 ---------- */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #1a1d24;            /* 页面背景 */
+  --panel: #222733;         /* 计算器面板 */
+  --display-bg: #2b303e;    /* 显示区背景 */
+  --display-text: #f5f6fa;  /* 主屏文字 */
+  --text-sub: #8a90a0;      /* 副屏/次要文字 */
+
+  /* 按键配色（对应 Python 版 view.py 的 colors 表） */
+  --key-normal: #576574;    /* 数字键 */
+  --key-action: #54a0ff;    /* 运算符键 */
+  --key-danger: #ff6b6b;    /* CLEAR 键 */
+  --key-success: #1dd1a1;   /* 等号键 */
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--bg);
+  font-family: "Segoe UI", "Microsoft YaHei", sans-serif;
+}
+
+/* ---------- 计算器面板 ---------- */
+.calculator {
+  width: 340px;
+  padding: 20px;
+  background: var(--panel);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .35);
+}
+
+/* ---------- 显示区（种子已就绪） ---------- */
+.display__main {
+  height: 60px;
+  padding: 0 12px;
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 60px;
+  color: var(--display-text);
+  background: var(--display-bg);
+  border: 2px solid #3a4152;
+  border-radius: 10px;
+  text-align: right;
+  overflow-x: auto;      /* 内容过长时横向滚动 */
+  white-space: nowrap;
+}
+
+.display__sub {
+  min-height: 18px;
+  padding: 4px 6px 0;
+  font-size: 12px;
+  color: var(--text-sub);
+  text-align: right;
+}
+
+/* ---------- 键盘容器（种子已就绪：4 列网格，内部为空） ---------- */
+.keyboard {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+}
+
+/* ---------- 按键样式（预留：等按键 PR 来使用） ---------- */
+.key {
+  height: 52px;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  transition: filter .15s;
+}
+.key:hover  { filter: brightness(1.15); }
+.key:active { filter: brightness(.9); }
+
+.key--normal  { background: var(--key-normal); }   /* 数字键 */
+.key--action  { background: var(--key-action); }   /* 运算符键 */
+.key--danger  { background: var(--key-danger); }   /* CLEAR 键 */
+.key--success { background: var(--key-success); }  /* 等号键 */
+
+.key--wide { grid-column: span 2; }  /* 占两列（如 0 键，对应 Python 版 colspan=2） */

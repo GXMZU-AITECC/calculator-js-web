@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>简易计算器</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="calculator">
+
+    <!-- ============ 1. 显示区（种子已就绪，请勿改动） ============ -->
+    <section class="display" aria-label="显示区">
+      <div class="display__main" id="display-main">0</div>
+      <div class="display__sub" id="display-sub"></div>
+    </section>
+
+    <!-- ============ 2. 键盘容器（种子已就绪，内部为空） ============
+         按键将在这里"长出来"：
+         - 任务列表见仓库 Issue
+         - 开发与 PR 规范见组织 guidelines 仓库
+    -->
+    <section class="keyboard" id="keyboard" aria-label="键盘区">
+      <!-- TODO(feat): 第一个任务是渲染数字按键 0-9，见仓库 Issue -->
+    </section>
+
+  </main>
+
+  <!-- 脚本按依赖顺序加载：formatter -> model -> view -> controller -> main -->
+  <script src="js/formatter.js"></script>
+  <script src="js/model.js"></script>
+  <script src="js/view.js"></script>
+  <script src="js/controller.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
